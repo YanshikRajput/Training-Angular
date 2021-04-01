@@ -25,23 +25,33 @@ export class AppComponent {
   isbindingvisivle = true;
   issdvisible = false;
   showProductTable=false;
+  showPurchase= false;
   
   showDemo():void{
     this.isbindingvisivle = true;
     this.issdvisible = false;   
     this.showProductTable=false;
+    this.showPurchase = false;
   }
  
   showdirectiveDemoFunction(): void{
     this.isbindingvisivle= false;
     this.showProductTable=false;
     this.issdvisible = true;
+    this.showPurchase = false;
   }
  
   showProductsTable(): void{
     this.isbindingvisivle = false;
     this.issdvisible = false;
     this.showProductTable = true;
+    this.showPurchase = false;
+  }
+  MasterDetailsFunction(): void{
+    this.isbindingvisivle= false;
+    this.showProductTable=false;
+    this.issdvisible = false;
+    this.showPurchase = true;
   }
 }
 

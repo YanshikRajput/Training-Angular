@@ -46,10 +46,15 @@
     <div class="col-md-3">
       <button (click)=' showProductsTable()' class="btn btn-danger">Product List</button>
     </div>
+    <div class="col-md-3">
+      <button (click)=' MasterDetailsFunction()' class="btn btn-danger">Master Details</button>
+    </div>
   </div>
   <hr/>
   <div class="col-md-12">
     <app-tshirtdatabinding *ngIf = "isbindingvisivle"></app-tshirtdatabinding>
     <app-hello *ngIf="issdvisible"></app-hello>
     <app-product *ngIf ="showProductTable"></app-product>
+    <app-purchase *ngIf ="showPurchase"></app-purchase>
+    
  
