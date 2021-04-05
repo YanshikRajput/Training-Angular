@@ -1,0 +1,13 @@
+<br>
+<br>
+<div class="container" >
+  <input type = "number" [(ngModel)] ='Height'>
+  <input type = "number" [(ngModel)] = 'Width'>
+  <br>
+  <br>
+  <img class="img" (mouseleave)='ChangeTshirtMouseExit()' (mouseenter)='ChangeTshirtMouseEnter()' 
+  [src]='imgSource' [style.height.px]='Height' [style.width.px]='Width'>
+  <!-- <div>
+    <button (click) ='generror()'>Generate Error</button>
+  </div> -->
+</div>
