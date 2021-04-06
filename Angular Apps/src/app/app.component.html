@@ -30,46 +30,49 @@
 <img  (mouseleave)='ChangeTshirtMouseExit()' (mouseenter)='ChangeTshirtMouseEnter()' 
 [src]='imgSource' [style.height.px]='Height' [style.width.px]='Width'> -->
 
-<nav class="navbar navbar-expand-lg navbar-dark btn-danger">
+<nav class="navbar navbar-expand-lg navbar-dark btn-danger header">
   <a class="navbar-brand" routerLink="/home">Yanshik Rajput</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav">
       <!-- <li class="nav-item ">
         <a class="nav-link " routerLink="/home" >
           Master-Details
         </a>
         
       </li> -->
-      <li class="nav-item active">
+      <li class="nav-item active mx-2" style="float:right">
         <a class="nav-link" routerLink= "/data-binding">Databinding </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item  active">
         <a class="nav-link" routerLink= "/custom-attribute" >Structural Directive Demo</a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown active">
         <a class="nav-link " routerLink="/products" >
           Products
         </a>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown active">
           <a class="nav-link " routerLink="/Master-Details" >
             Master Details
           </a>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown active">
             <a class="nav-link " routerLink="/Share-Data" >
               Share-Data
             </a>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" routerLink= "/Gen-Error" >GenerateError</a>
             </li>
+            <li class="nav-item active">
+              <a class="nav-link" routerLink= "/Login" >Login Forms</a>
+            </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <!-- <form class="form-inline my-2 my-lg-0"> -->
       <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-    </form>
+    <!-- </form> -->
   </div>
 </nav>
 <router-outlet></router-outlet>

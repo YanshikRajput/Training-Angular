@@ -6,6 +6,10 @@ import{ BehaviorSubject} from 'rxjs';
   providedIn: 'root'
 })
 export class SenddataService {
+  updateProduct(products: IProduct) {
+    this.product = products;
+    this.product$.next(this.product);
+    }
 product ={
   Id : 1,
     Title: 'pen',

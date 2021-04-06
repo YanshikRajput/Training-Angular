@@ -1,8 +1,25 @@
-<div class="container">
+<br>
+<h1>Data Show</h1>
+    <div class="row">
+        <div class="col-md-4">
+          <input class="form-control  " type="text" [(ngModel)]= "searchtext" placeholder="Search by title"/>
+          
+        </div>
+        <div class="col-md-4">
+   
+        </div>
+        <div class="col-md-4">
+          
+          <input  class="form-control " type= "number" [(ngModel)]= "filterprice" placeholder="Search by price"/>
+        </div>
+    </div>
+  <br/>
 
-<div class = "row">
-    <table class="table">
-        <thead>
+
+
+    <div class = "col-md-12">
+    <table class="table table-striped" style="margin-top: 5rem;">
+        <thead class="bg-dark text-white">
             <tr>
                 <th>
                     Id
@@ -25,7 +42,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor = "let p of products">
+            <tr *ngFor = "let p of products |productsearch:searchtext |custompipe:filterprice ">
                 <td>{{p.Id}}</td>
                 <td>{{p.Title}}</td>
                 <td>{{p.Price}}</td>
@@ -38,11 +55,18 @@
                     </ng-template>
                     <ng-template #outofstock>
                         <i class="fa fa-times"aria-hidden="true"></i>
-                        <button class="btn btn-default">Order Now</button>
+                        <button class="btn btn-danger">Order Now</button>
                     </ng-template>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
-</div>
+<footer class="page-footer font-small blue fixed-bottom">
+    <div class="footer-copyright text-center py-3" style="color: grey;">
+        <h5>Explanation :</h5>
+        <p>In this component we have used a dataservice to let the component access a function which return some data and
+            is shown in a table, and if item is out of stock a button will be visible to order more.
+        </p>
+    </div>
+  </footer>

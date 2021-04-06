@@ -41,7 +41,9 @@
     </table>
 </div> -->
 <div class="row">
-    <h2 class="text-danger text-center">Master- Details using Component Communication</h2>
+    <div class="col-sm-12">
+        <h2 class="text-danger text-center my-4">Master- Details using Component Communication</h2>
+    </div>
 </div>
 <div class="row">
     <!-- <table class="table">
@@ -78,3 +80,11 @@
         </mat-expansion-panel>
     </mat-accordion>
 </div>
+<footer class="page-footer font-small blue fixed-bottom">
+    <div class="footer-copyright text-center py-3" style="color: grey;">
+        <h5>Explanation :</h5>
+        <p>In this component we make use @Input/@output directives in two components both of which have access to a service named dataservice
+            The component 1 fetches data from service and display an expansion panel, and that expansion panel contains a table of component 2.
+        </p>
+    </div>
+  </footer>

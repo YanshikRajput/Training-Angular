@@ -1,5 +1,5 @@
 import { ErrorHandler, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -18,6 +18,10 @@ import { AttributeDirectiveComponent } from './attribute-directive/attribute-dir
 import { HomeComponent } from './home/home.component';
 import { GenerateerrorComponent } from './generateerror/generateerror.component';
 import { MyerrorhandelerService } from './myerrorhandeler.service';
+import { LoginComponent } from './login/login.component';
+import { CustompipePipe } from './custompipe.pipe';
+import { ProductsearchPipe } from './productsearch.pipe';
+
 
 @NgModule({
   declarations: [
@@ -32,14 +36,19 @@ import { MyerrorhandelerService } from './myerrorhandeler.service';
     ChangecolorDirective,
     AttributeDirectiveComponent,
     HomeComponent,
-    GenerateerrorComponent
+    GenerateerrorComponent,
+    LoginComponent,
+    CustompipePipe,
+    ProductsearchPipe,
+  
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MatExpansionModule
+    MatExpansionModule,
+    ReactiveFormsModule
   ],
   providers: [{provide:ErrorHandler,useClass:MyerrorhandelerService}],
   bootstrap: [AppComponent]
